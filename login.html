@@ -4,40 +4,78 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- Latest compiled and minified CSS -->
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+			rel="stylesheet">
+
+		<!-- Latest compiled JavaScript -->
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+		<script src="https://kit.fontawesome.com/36b801b814.js"
+			crossorigin="anonymous"></script>
 		<link rel="stylesheet" type="text/css" href="login.css">
+		<link rel="stylesheet" href="curtas.css">
 		<title>Curta IFC</title>
 	</head>
 	<body>
-		<form action="validarlogin.php" method="POST">
-			<div class="card2">
-				<div>
-					<img class="logo" src="img/logopng.png">
+		<header id="header">
+			<a id="logo" href="index.html"><img id="img_logo" src="img/logopng.png"></a>
+			<nav id="nav">
+				<button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true"
+					aria-controls="menu" aria-expanded="false">Menu
+					<span id="hamburger"></span>
+				</button>
+				<ul id="menu" role="menu">
+					<li><a class="link-menu" href="oficinas.php">Oficinas</a></li>
+					<li><a class="link-menu" href="premiacao.php">Premiações</a></li>
+					<li><a class="link-menu" href="perfil.php">Perfil</a></li>
+					<li><a class="link-menu" href="sobre.html">Sobre</a></li>
+					<li><a class="link-menu" href="login.html"><i class="fas fa-sign-in-alt"></i></a></li>
+				</ul>
+			</nav>
+		</header>
+		<main>
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<form action="validarlogin.php" method="POST">
+							<div class="card2">
+								<div>
+									<img class="logo" src="img/logopng.png">
+								</div>
+								<br>
+								<p class="titulos">Nome</p>
+								<input type="text" name="nome_aluno" class="campo2" placeholder="Digite
+									seu
+									nome">
+								<br>
+								<p class="titulos">Matricula</p>
+								<input type="text" name="matricula_aluno" class="campo2"
+									placeholder="Digite
+									sua matricula">
+								<br>
+								<p class="titulos">Senha</p>
+								<input type="password" name="senha_aluno" class="campo2"
+									placeholder="Digite
+									sua senha">
+								<br><br>
+								<p>
+									<input type="submit" name="Entrar" value="Entrar">
+								</p>
+
+								<p>
+									<a class="link" href="telacadastro.html">Ainda não possui cadastro?</a>
+								</p>
+
+								<!--<p>
+									<a class="link" href="#">Esqueceu sua senha?</a>
+								</p> -->
+							</div>
+						</form>
+					</div>
 				</div>
-				<br>
-				<p class="titulos">Nome</p>
-				<input type="text" name="nome_aluno" class="campo2" placeholder="Digite seu
-					nome">
-				<br>
-				<p class="titulos">Matricula</p>
-				<input type="text" name="matricula_aluno" class="campo2" placeholder="Digite
-					sua matricula">
-				<br>
-				<p class="titulos">Senha</p>
-				<input type="password" name="senha_aluno" class="campo2" placeholder="Digite
-					sua senha">
-				<br><br>
-				<p>
-					<input type="submit" name="Entrar" class="bot" value="Entrar">
-				</p>
-
-				<p>
-					<a class="link" href="telacadastro.html">Ainda não possui cadastro?</a>
-				</p>
-
-				<!--	<p>
-							<a class="link" href="#">Esqueceu sua senha?</a>
-						</p> -->
 			</div>
-		</form>
+		</main>
 	</body>
 </html>

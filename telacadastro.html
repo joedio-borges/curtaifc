@@ -1,69 +1,105 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- Latest compiled and minified CSS -->
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+			rel="stylesheet">
+
+		<!-- Latest compiled JavaScript -->
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+		<script src="https://kit.fontawesome.com/36b801b814.js"
+			crossorigin="anonymous"></script>
 		<link rel="stylesheet" type="text/css" href="cadastro.css">
+		<link rel="stylesheet" href="curtas.css">
 		<title>Curta IFC</title>
 
 	</head>
 
-		<body>
-				<form action="Salvar.php" method="POST">
-
-					<div class="card">
-						<div>
-						<img class="logo" src="img/logopng.png">
-						</div>
-						<br>
-							<p class="titulos">Digite seu nome</p>
-							<input type="text" name="nome_aluno" class="campo" placeholder="Digite seu nome" required="text">
-						<br>
-							<p class="titulos">Email</p>
-							<input type="Email" name="email_aluno" class="campo" placeholder="Digite sua Senha" required="Email">
-						<br>
-							<p class="titulos">Senha</p>
-							<input type="password" name="senha_aluno" class="campo" placeholder="Digite uma senha" required="password">
-						<br>
-							<p class="titulos">Data de Nascimento</p>
-							<input type="date" name="data_nasc" class="campo" required="date">
-						<br>
-							<p class="titulos">Matricula</p>
-							<input type="text" name="matricula_aluno" class="campo" placeholder="Digite sua matricula" required="text">
-						<br>
-							<p class="titulos">Escolha seu Curso</p>
-            						<select class="campo" name="curso">
-               						<option selected disabled value="" class="campo">Selecione</option>
-                					<option class="campo" value="1">Informática</option>
-                					<option class="campo" value="2">Hospedagem</option>
-            					</select>
-            			<br>
-
-            				<p class="titulos">Escolha sua Turma</p>
-            				<select class="campo" name="turma">
-            				<option selected disabled value="" class="campo">Selecione</option>
-                					<option class="campo" value="1">1°A</option>
-                					<option class="campo" value="2">1°B</option>
-                					<option class="campo" value="3">1°H</option>
-                					<option class="campo" value="4">2°A</option>
-                					<option class="campo" value="5">2°B</option>
-                					<option class="campo" value="6">2°H</option>
-                					<option class="campo" value="7">3°A</option>
-                					<option class="campo" value="8">3°B</option>
-                					<option class="campo" value="9">3°H</option>
-            					</select>
-            			<br><br>
-            					<p><input type="submit" name="enviar" class="res" value="Registrar"></p>
-            		
-            				<p class="link">
-                			<a class="link" href="login.php">Já possui cadastro?</a>
-           					</p>
-
+	<body>
+		<header id="header">
+			<a id="logo" href="index.html"><img id="img_logo" src="img/logopng.png"></a>
+			<nav id="nav">
+				<button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true"
+					aria-controls="menu" aria-expanded="false">Menu
+					<span id="hamburger"></span>
+				</button>
+				<ul id="menu" role="menu">
+					<li><a class="link-menu" href="oficinas.php">Oficinas</a></li>
+					<li><a class="link-menu" href="premiacao.php">Premiações</a></li>
+					<li><a class="link-menu" href="perfil.php">Perfil</a></li>
+					<li><a class="link-menu" href="sobre.html">Sobre</a></li>
+					<li><a class="link-menu" href="login.html"><i class="fas fa-sign-in-alt"></i></a></li>
+				</ul>
+			</nav>
+		</header>
+		<main>
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<form action="Salvar.php" method="POST">
+							<div class="card">
+								<div>
+									<img class="logo" src="img/logopng.png">
+								</div>
+								<br>
+								<p class="titulos">Digite seu nome</p>
+								<input type="text" name="nome_aluno" class="campo" placeholder="Digite
+									seu
+									nome" required="text">
+								<br>
+								<p class="titulos">Email</p>
+								<input type="Email" name="email_aluno" class="campo" placeholder="Digite
+									sua
+									Senha" required="Email">
+								<br>
+								<p class="titulos">Senha</p>
+								<input type="password" name="senha_aluno" class="campo"
+									placeholder="Digite
+									uma senha" required="password">
+								<br>
+								<p class="titulos">Data de Nascimento</p>
+								<input type="date" name="data_nasc" class="campo" required="date">
+								<br>
+								<p class="titulos">Matricula</p>
+								<input type="text" name="matricula_aluno" class="campo"
+									placeholder="Digite
+									sua matricula" required="text">
+								<br>
+								<p class="titulos">Escolha seu Curso</p>
+								<select class="campo" name="curso">
+									<option selected disabled value="" class="campo">Selecione</option>
+									<option class="campo" value="1">Informática</option>
+									<option class="campo" value="2">Hospedagem</option>
+								</select>
+								<br>
+								<p class="titulos">Escolha sua Turma</p>
+								<select class="campo" name="turma">
+									<option selected disabled value="" class="campo">Selecione</option>
+									<option class="campo" value="1">1°A</option>
+									<option class="campo" value="2">1°B</option>
+									<option class="campo" value="3">1°H</option>
+									<option class="campo" value="4">2°A</option>
+									<option class="campo" value="5">2°B</option>
+									<option class="campo" value="6">2°H</option>
+									<option class="campo" value="7">3°A</option>
+									<option class="campo" value="8">3°B</option>
+									<option class="campo" value="9">3°H</option>
+								</select>
+								<br><br>
+								<p><input type="submit" name="enviar" class="res" value="Registrar"></p>
+								<p class="link">
+									<a class="link" href="login.php">Já possui cadastro?</a>
+								</p>
+							</div>
+						</form>
 					</div>
-
-				</form>
-
-		</body>
+				</div>
+			</div>
+		</main>
+	</body>
 </html>
